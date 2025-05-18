@@ -49,7 +49,7 @@ for track in "${tracks_to_update_to_drive[@]}"; do
     cp "$PLAYLIST_PATH/$track" "$EXTERNAL_STORAGE_PATH"
 done
 
-
+# Final diff command to check for any anomalies
 diff -rq "$PLAYLIST_PATH" "$EXTERNAL_STORAGE_PATH" | grep -Ev "System Volume Information|sync\.ffs_db|Only in .*/Album Covers"
 
 
