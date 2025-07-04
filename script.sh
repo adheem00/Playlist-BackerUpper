@@ -31,7 +31,7 @@ for track in "${tracks_to_be_deleted[@]}"; do
     echo "$track is about to be deleted."
     
     echo "$track" >> $DELETION_HISTORY
-    rm -vi "/mnt/d/$track"
+    rm -vi "$EXTERNAL_STORAGE_PATH/$track"
 done
 
 echo "All inconsistent files have been removed from DriveKnight."
